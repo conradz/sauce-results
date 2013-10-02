@@ -4,7 +4,7 @@
   "description": "Set test results for a Sauce Labs job",
   "main": "index.js",
   "scripts": {
-    "test": "tap test.js"
+    "test": "tap --timeout 120 test.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "request": "~2.27.0"
   },
   "devDependencies": {
-    "tap": "~0.4.4"
+    "tap": "~0.4.4",
+    "wd": "~0.1.5"
   }
 }
