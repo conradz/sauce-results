@@ -1,8 +1,17 @@
 # sauce-results
 
+[![NPM](https://nodei.co/npm/sauce-results.png)](https://nodei.co/npm/sauce-results/)
+
+[![Build Status](https://drone.io/github.com/conradz/sauce-results/status.png)](https://drone.io/github.com/conradz/sauce-results/latest)
+[![Dependency Status](https://gemnasium.com/conradz/sauce-results.png)](https://gemnasium.com/conradz/sauce-results)
+
 Helper to publish the results of a [Sauce Labs](https://saucelabs.com/) test
 job. Then you can use the awesome
 [status images](https://saucelabs.com/docs/status-images).
+
+Example status image:
+
+[![Selenium Test Status](https://saucelabs.com/browser-matrix/sauce-results-test.svg)](https://saucelabs.com/u/sauce-results-test)
 
 Simply call the function with the options object and a callback function.
 
