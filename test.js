@@ -3,7 +3,8 @@ var test = require('tap').test,
     results = require('./');
 
 var user = process.env.SAUCE_USER,
-    key = process.env.SAUCE_KEY;
+    key = process.env.SAUCE_KEY,
+    build = process.env.DRONE_BUILD_NUMBER;
 
 function startBrowser(options, callback) {
     var browser = wd.remote('ondemand.saucelabs.com', 80, user, key);
@@ -22,14 +23,15 @@ function startBrowser(options, callback) {
     }
 }
 
-test('set passed results', function(t) {
+test('set passed results', { timeout: 60000 }, function(t) {
     t.ok(user, 'Sauce Labs user provided');
     t.ok(key, 'Sauce Labs key provided');
 
     startBrowser({
         name: 'Passed test',
         platform: 'Linux',
-        browserName: 'firefox'
+        browserName: 'firefox',
+        build: build
     }, started);
 
     function started(err) {
@@ -38,7 +40,7 @@ test('set passed results', function(t) {
         results({
             user: user,
             key: key,
-            passed: true
+            passed: true,
         }, setResults);
     }
 
@@ -48,14 +50,15 @@ test('set passed results', function(t) {
     }
 });
 
-test('set failed results', function(t) {
+test('set failed results', { timeout: 60000 }, function(t) {
     t.ok(user, 'Sauce Labs user provided');
     t.ok(key, 'Sauce Labs key provided');
 
     startBrowser({
         name: 'Failed test',
         platform: 'Linux',
-        browserName: 'chrome'
+        browserName: 'chrome',
+        build: build
     }, started);
 
     function started(err) {
