@@ -37,3 +37,9 @@ results({
  * `job`: The Sauce Labs job ID. If none is provided, it will retrieve the last job ID.
  * `passed`: Boolean indicating if the job passed or not
 
+## Credits
+
+Thanks goes to @rvagg for doing something like this in
+[brtapsauce](https://github.com/rvagg/brtapsauce). This module was split out
+from the larger project and rewritten based on his code.
+
