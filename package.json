@@ -1,6 +1,6 @@
 {
   "name": "sauce-results",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Set test results for a Sauce Labs job",
   "main": "index.js",
   "scripts": {
