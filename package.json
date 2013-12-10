@@ -23,7 +23,7 @@
     "url": "https://github.com/conradz/sauce-results/issues"
   },
   "dependencies": {
-    "request": "~2.27.0"
+    "request": "~2.29.0"
   },
   "devDependencies": {
     "tap": "~0.4.4",
